@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI Chat Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>OpenAI Chat</h1>
+    <div id="key-row">
+        <input type="text" id="OpenAIKey" name="OpenAIKey" placeholder="Enter OpenAI Key">
+        <button id="enter-key-btn">Enter</button>
+    </div>
+    <div id="chat-ui" style="display:none;">
+        <div id="chat"></div>
+        <div class="input-row">
+            <input type="text" id="input" placeholder="Type your message here..." />
+            <button id="send">Send</button>
+        </div>
+    </div>
+</body>
+</html>
