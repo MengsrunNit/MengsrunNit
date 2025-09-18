@@ -1,9 +1,123 @@
-body { font-family: Arial, sans-serif; margin: 20px; }
-#chat { border: 1px solid #ccc; padding: 10px; height: 300px; overflow-y: scroll; }
-#input { width: 80%; }
-#send { width: 18%; }
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f9fb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
 
-#OpenAIKey, #chat{
-    border: 1px solid #ccc;
-    margin:10px;
+h1 {
+    margin-top: 40px;
+    color: #2d72d9;
+    letter-spacing: 1px;
+}
+
+#key-row {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+#OpenAIKey {
+    padding: 10px;
+    border: 1px solid #cfd8dc;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #f5f7fa;
+    transition: border 0.2s;
+    width: 250px;
+}
+
+#OpenAIKey:focus {
+    border: 1.5px solid #2d72d9;
+    outline: none;
+}
+
+#enter-key-btn {
+    padding: 10px 18px;
+    background: #2d72d9;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#enter-key-btn:hover {
+    background: #1b4f91;
+}
+
+#chat-ui {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 24px 20px 16px 20px;
+    width: 100%;
+    max-width: 480px;
+}
+
+#chat {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    height: 320px;
+    overflow-y: auto;
+    background: #fafbfc;
+    margin-bottom: 18px;
+    font-size: 1rem;
+}
+
+#chat p {
+    margin: 0 0 10px 0;
+    line-height: 1.5;
+}
+
+#chat strong {
+    color: #2d72d9;
+}
+
+.input-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+#input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #cfd8dc;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #f5f7fa;
+    transition: border 0.2s;
+}
+
+#input:focus {
+    border: 1.5px solid #2d72d9;
+    outline: none;
+}
+
+#send {
+    width: 80px;
+    background: #2d72d9;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#send:disabled {
+    background: #b0c4de;
+    cursor: not-allowed;
+}
+
+#send:hover:not(:disabled) {
+    background: #1b4f91;
 }
